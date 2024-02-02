@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.elliptical-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+  background-color: #f8f7fa; /* Set your desired background color */
+  clip-path: ellipse(
+    85% 45% at 0 0
+  ); /* Adjust the ellipse size and position as needed */
+  z-index: -1; /* Ensure the elliptical background is behind other content */
+}
+
+.input-style {
+  line-height: 1; /* Adjust the line-height as per your requirement */
+}
+
+.transition-fade-in {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.transition-fade-out {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.transition-fade-in2 {
+  transition: all 0.2s ease-in-out;
+}
+
+.transition-fade-out2 {
+  transition: all 0.2s ease-in-out;
+}
+
+.slider-content {
+  transition: transform 0.5s ease-in-out;
+}
+
+.unselectable {
+  user-select: none;
+}
+
+.animateOpenModal {
+  animation: moveInDown 0.5s ease-in-out;
+}
+
+.animateCloseModal {
+  animation: moveOutUp 0.5s ease-in-out;
+}
+
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+}
